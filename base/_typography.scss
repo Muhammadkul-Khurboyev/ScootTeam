@@ -1,0 +1,22 @@
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src:
+       url('../fonts/space-mono-v13-latin-700.woff2') format('woff2'),
+       url('../fonts/space-mono-v13-latin-700.woff') format('woff');
+}
+
+
+/* lexend-deca-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src:
+       url('../fonts/lexend-deca-v21-latin-regular.woff2') format('woff2'),
+       url('../fonts/lexend-deca-v21-latin-regular.woff') format('woff');
+}

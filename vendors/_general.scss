@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+img {
+  display: block;
+}
+
+.site-main {
+  flex-grow: 1;
+}

@@ -1,0 +1,49 @@
+@use "../abstracts/mixins";
+@use "../vendors/general";
+
+.site-header {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  padding-block: 24px;
+
+  &__navbar{
+    margin-top: 24px;
+    transform: translateX(-320px);
+    padding-top: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #333a44;
+
+  }
+  &__list{
+    @include mixins.list-unstyled;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+.navbar-list__item-link {
+  @include mixins.link;
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.open-menu {
+  transform: translateX(-32px);
+  transition: transform 0.3s linear;
+}
+.close-btn {
+  background-image: url("../images/icon-menu-close.svg");
+}
