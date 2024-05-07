@@ -7,31 +7,54 @@
   <link rel="stylesheet" href="./styles/main.min.css">
 </head>
 <body>
+  <!-- Header Start -->
   <header class="site-header">
     <div class="container">
-      <div class="site-header__logo-wrapper">
-        <button class="site-header__btn" type="button"></button>
-        <a href="/">
-          <img class="site-header__logo" src="./images/scootlogo.svg" alt="Header logotip">
-        </a>
+      <div class="site-header__inner">
+        <div class="site-header__logo-wrapper">
+          <button class="site-header__btn" type="button"></button>
+          <a href="/">
+            <img class="site-header__logo" src="./images/scootlogo.svg" alt="Header logotip">
+          </a>
+        </div>
+        <nav class="site-header__navbar">
+          <ul class="site-header__list navbar-list">
+            <li class="navbar-list__item">
+              <a class="navbar-list__item-link" href="#">Home</a>
+            </li>
+            <li class="navbar-list__item">
+              <a class="navbar-list__item-link" href="#">About</a>
+            </li>
+            <li class="navbar-list__item">
+              <a class="navbar-list__item-link" href="#">Careers</a>
+            </li>
+          </ul>
+          <a class="site-header__link header-link" href="#">Get Scootin</a>
+        </nav>
       </div>
-      <nav class="site-header__navbar">
-        <ul class="site-header__list navbar-list">
-          <li class="navbar-list__item">
-            <a class="navbar-list__item-link" href="#">Home</a>
-          </li>
-          <li class="navbar-list__item">
-            <a class="navbar-list__item-link" href="#">About</a>
-          </li>
-          <li class="navbar-list__item">
-            <a class="navbar-list__item-link" href="#">Careers</a>
-          </li>
-        </ul>
-        <a class="site-header__link" href="#">Get Scootin</a>
-      </nav>
     </div>
   </header>
+   <!-- Header End -->
 
+   <main class="site-main">
+    <!-- Hero section start -->
+    <section class="home-hero">
+      <div class="container">
+        <div class="home-hero__inner">
+          <h1 class="home-hero__title">
+            Scooter sharing made simple
+          </h1>
+          <p class="home-hero__desc">
+            Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient locations in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!
+          </p>
+          <a class="home-hero__link site-header__link" href="#">
+            Get Scootin
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Hero section end -->
+   </main>
   <script src="./main.js"></script>
 </body>
 </html>

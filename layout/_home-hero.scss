@@ -1,0 +1,32 @@
+@use "../abstracts/mixins";
+@use "../vendors/general";
+
+
+.home-hero {
+  padding-top: 115px;
+  padding-bottom: 180px;
+  background-image: url("../images/herobg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner {
+    text-align: center;
+    color: #fff;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1.786px;
+  }
+  &__desc {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  &__link {
+    margin: 0 auto;
+  }
+
+}
