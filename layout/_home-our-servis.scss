@@ -1,0 +1,113 @@
+@use "../base/normalize";
+@use "../base/typography";
+@use "../abstracts/mixins";
+@use "../abstracts/container";
+@use "../vendors/general";
+
+.our-servis {
+  padding-top: 120px;
+  padding-bottom: 83px;
+
+  &__title {
+    @include mixins.visually-hidden;
+  }
+
+  &__list {
+    @include mixins.list-unstyled;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+  }
+  &__item {
+    text-align: center;
+  }
+  &__item-title {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: #495567;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.893px;
+  }
+  &__item-desc {
+    @include mixins.text-font;
+    color: #939caa;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__item-img {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .our-servis {
+    padding-top: 122px;
+    padding-bottom: 92px;
+    background-image: url("../images/servisbgline.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 240px) top;
+
+    &__list {
+      row-gap: 40px;
+    }
+
+    &__item {
+      display: flex;
+      padding-left: 63px;
+    }
+    &__item-title-wrapper {
+      text-align: start;
+      width: 398px;
+    }
+    &__item-img {
+      width: 96px;
+      height: 96px;
+      margin-block: 0;
+      margin-left: 0;
+      margin-right: 79px;
+    }
+    &__item-title {
+      margin-top: 0;
+      margin-bottom: 27px;
+      font-size: 24px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .our-servis {
+    padding-top: 160px;
+    padding-bottom: 147px;
+    background-image: url("../images/verticalbgline.svg");
+    background-repeat: no-repeat;
+    background-position: left calc(50% - 80px);
+
+    &__list {
+      flex-direction: row;
+      column-gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      padding-left: 0;
+      flex-direction: column;
+      width: 350px;
+    }
+    &__item-img {
+      margin-right: 0;
+    }
+    &__item-title {
+      margin-top: 40px;
+    }
+    &__item-title-wrapper {
+      width: 350px;
+    }
+  }
+}
+@media only screen and (min-width: 1550px) {
+  .our-servis {
+    background-image: url("../images/verticalbgline.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 200px) calc(50% - 80px);
+  }
+}

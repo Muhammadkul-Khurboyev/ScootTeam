@@ -1,7 +1,13 @@
+@use "../base/normalize";
+@use "../base/typography";
 @use "../abstracts/mixins";
+@use "../abstracts/container";
 @use "../vendors/general";
 @use "../companents/links";
 
+.container {
+  padding: 0 32px;
+}
 .site-header {
   padding-block: 24px;
 
@@ -12,6 +18,7 @@
     padding-left: 32px;
     padding-right: 32px;
     position: absolute;
+    z-index: 9;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,7 +65,14 @@
 }
 .header-link {
   margin-top: 200px;
+  border: 1px solid #fcb72b;
+
+  &:hover {
+    background-color: transparent;
+    color: #fcb72b;
+  }
 }
+
 
 @media only screen and (min-width: 750px) {
   .site-header {

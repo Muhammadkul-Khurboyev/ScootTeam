@@ -1,8 +1,4 @@
-@use "../base/normalize";
-@use "../abstracts/variables";
-@use "../base/typography";
-@use "../abstracts/mixins";
-@use "../abstracts/container";
-
 @use "../layout/header";
 @use "../layout/home-hero";
+@use "../layout/home-our-servis";
+@use "../layout/service-facilities";

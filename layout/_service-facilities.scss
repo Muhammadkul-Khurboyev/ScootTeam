@@ -1,0 +1,124 @@
+@use "../base/normalize";
+@use "../base/typography";
+@use "../abstracts/mixins";
+@use "../abstracts/container";
+@use "../vendors/general";
+
+.service-facilities {
+  background-image: url("../images/riding.png");
+  background-repeat: no-repeat;
+  background-position: top calc(50% + 40px);
+  background-size: 500px;
+
+  &__inner {
+    background-image: url("../images/nearcity.png"),url("../images/zerohasl.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 140px) calc(50% - 295px), calc(50% + 140px) calc(50% + 400px);
+    background-size: 500px;
+  }
+
+  &__title-wrapper {
+    margin: 0 auto;
+    padding-top: 230px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-block: 0;
+    color: #495567;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.429px;
+  }
+  &__desc {
+    @include mixins.text-font;
+    color: #939caa;
+    margin-block: 32px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .service-facilities {
+    background-image: url("../images/riding.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 80px) calc(50% - 820px);
+    background-size: 600px;
+
+    &__inner {
+      background-image: url("../images/nearcity.png"),url("../images/zerohasl.png");
+      background-repeat: no-repeat;
+      background-position: calc(50% - 140px) calc(50% - 225px), calc(50% + 140px) calc(50% + 400px);
+      background-size: 600px;
+    }
+    &__title-wrapper {
+      padding-top: 300px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .service-facilities {
+    background-image: url("../images/riding.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 160px) calc(50% - 990px);
+    background-size: 800px;
+
+    &__inner {
+      background-image: url("../images/nearcity.png"),url("../images/zerohasl.png");
+      background-repeat: no-repeat;
+      background-position: calc(50% - 200px) calc(50% - 225px), calc(50% + 260px) calc(50% + 560px);
+      background-size: 800px;
+    }
+    &__title-wrapper {
+      width: 573px;
+      padding-top: 400px;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -2.143px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .service-facilities {
+
+    background-image: url("../images/riding.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 390px) top;
+    background-size: 880px;
+
+    &__inner {
+      background-image: url("../images/nearcity.png"),url("../images/zerohasl.png");
+      background-repeat: no-repeat;
+      background-position: calc(50% - 500px) calc(50% - 15px), calc(50% + 460px) calc(50% + 560px);
+      background-size: 880px;
+      padding-block: 100px;
+    }
+    &__title-wrapper {
+      text-align: start;
+      width: 545px;
+      margin: 0;
+      padding: 0;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -2.143px;
+    }
+    &__desc {
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+  }
+  .city-near {
+    padding-block: 292px;
+    margin-left: auto;
+  }
+}
+.service-facilities__link {
+  border: 1px solid #fcb72b;
+}
+.service-facilities__link:hover {
+  background-color: transparent;
+  color: #fcb72b;
+}

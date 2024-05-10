@@ -1,13 +1,17 @@
+@use "../base/normalize";
+@use "../base/typography";
 @use "../abstracts/mixins";
+@use "../abstracts/container";
 @use "../vendors/general";
 
 
 .home-hero {
+  position: relative;
   padding-top: 115px;
   padding-bottom: 180px;
-  background-image: url("../images/herobg.png");
-  background-position: center;
-  background-size: cover;
+  background-image: url("../images/mobileherobg.svg"), url("../images/herobg.png");
+  background-position: left calc(50% + 240px),center;
+  background-size:  150px, cover;
   background-repeat: no-repeat;
 
   &__inner {
@@ -22,11 +26,99 @@
     letter-spacing: -1.786px;
   }
   &__desc {
+    @include mixins.text-font;
     margin-top: 0;
     margin-bottom: 24px;
   }
   &__link {
     margin: 0 auto;
+  }
+}
+.tablet-img {
+  display: none;
+}
+@media only screen and (min-width: 330px) {
+  .home-hero {
+    padding-bottom: 200px;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .home-hero {
+    padding-top: 127px;
+    padding-bottom: 200px;
+    background-position: left calc(50% + 120px),center;
+
+    &__title {
+      font-size: 46px;
+      line-height: 48px;
+      letter-spacing: -2.5px;
+    }
+    &__desc {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home-hero {
+    padding-top: 137px;
+    padding-bottom: 217px;
+    background-image: url("../images/tabletherobg.svg"), url("../images/tablet.png");
+    background-position: left calc(50% + 220px),center;
+    background-size:  auto, cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+      width: 573px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 56px;
+      letter-spacing: -2.5px;
+    }
+  }
+  .tablet-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 45.5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home-hero {
+    padding-block: 153px;
+    background-image: url("../images/desktop.svg"), url("../images/desktopbg.png");
+    background-position: calc(50% - 120px) calc(50% + 100px),center;
+    background-size:  auto, cover;
+    background-repeat: no-repeat;
+    &__inner {
+      width: 500px;
+      text-align: start;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__desc-wrapper {
+      width: 405px;
+      margin-left: 95px;
+    }
+    &__desc {
+      margin-bottom: 40px;
+    }
+    &__link {
+      margin-left: 95px;
+      border: 1px solid #fcb72b;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 
 }
