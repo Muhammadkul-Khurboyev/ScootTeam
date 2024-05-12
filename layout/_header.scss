@@ -5,9 +5,7 @@
 @use "../vendors/general";
 @use "../companents/links";
 
-.container {
-  padding: 0 32px;
-}
+
 .site-header {
   padding-block: 24px;
 
@@ -54,6 +52,11 @@
   color: #fff;
   font-size: 18px;
   line-height: 25px;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: #fcb72b;
+  }
 }
 
 .open-menu {

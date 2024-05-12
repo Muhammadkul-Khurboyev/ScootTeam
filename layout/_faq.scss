@@ -1,0 +1,135 @@
+@use "../base/normalize";
+@use "../base/typography";
+@use "../abstracts/mixins";
+@use "../abstracts/container";
+@use "../vendors/general";
+
+
+.about-desc {
+  padding-bottom: 100px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #495567;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.429px;
+  }
+
+  &__inner-title {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    color: #495567;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.071px;
+  }
+  &__inner-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  &__detail {
+    width: 100%;
+    background-color: #f2f5f9;
+    padding: 15px;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: #fff4df;
+    }
+  }
+  &__detail[open] &__summary::after {
+    transform: rotate(180deg);
+  }
+  &__summary {
+    list-style: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 19px;
+      height: 12px;
+      background-image: url("../images/path.svg");
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__summary-title {
+    color: #495567;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.804px;
+  }
+
+  &__detail-desc {
+    @include mixins.text-font;
+    color: #495567;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .about-desc {
+    padding-bottom: 120px;
+
+    &__detail {
+      padding: 32px;
+    }
+    &__summary-title {
+      font-size: 18px;
+      padding-right: 16px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-desc {
+    padding-bottom: 120px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -2.14px;
+    }
+    &__inner-title {
+      margin-top: 64px;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -1.786px;
+    }
+    &__summary-title {
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: -1.071px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about-desc {
+    padding-bottom: 160px;
+
+    &__title {
+      margin-bottom: 64px;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+    &__inner-title {
+      margin: 0;
+    }
+
+    &__inner-desc {
+      width: 730px;
+    }
+  }
+  .safe-driving {
+    margin-top: 64px;
+  }
+}

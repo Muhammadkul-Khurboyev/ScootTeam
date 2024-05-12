@@ -1,0 +1,98 @@
+@use "../base/normalize";
+@use "../base/typography";
+@use "../abstracts/mixins";
+@use "../abstracts/container";
+@use "../vendors/general";
+
+.about-facilities {
+  padding-bottom: 120px;
+  background-image: url("../images/aboutmobility.png"), url("../images/abouturban.png");
+  background-position: calc(50% + 100px) calc(50% - 480px),calc(50% - 160px) calc(50% + 120px);
+  background-repeat: no-repeat;
+  background-size: 580px,580px;
+
+  &__title-wrapper {
+    padding-top: 350px;
+  }
+
+  &__title {
+    color: #495567;
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__desc {
+    color: #939caa;
+    @include mixins.text-font;
+    text-align: center;
+    margin-block: 0;
+  }
+}
+
+@media only screen and (min-width: 406px) {
+  .about-facilities {
+    padding-bottom: 120px;
+    background-image: url("../images/aboutmobility.png"), url("../images/abouturban.png");
+    background-position: calc(50% + 100px) calc(50% - 420px),calc(50% - 160px) calc(50% + 120px);
+    background-repeat: no-repeat;
+    background-size: 580px,580px;
+  }
+}
+
+@media only screen and (min-width: 565px) {
+  .about-facilities {
+    padding-bottom: 120px;
+    background-image: url("../images/aboutmobility.png"), url("../images/abouturban.png");
+    background-position: calc(50% + 100px) calc(50% - 380px),calc(50% - 160px) calc(50% + 120px);
+    background-repeat: no-repeat;
+    background-size: 580px,580px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-facilities {
+    padding-bottom: 180px;
+    background-image: url("../images/aboutmobility.png"), url("../images/abouturban.png");
+    background-position: calc(50% + 160px) calc(50% - 470px),calc(50% - 210px) calc(50% + 150px);
+    background-repeat: no-repeat;
+    background-size: 800px,800px;
+
+    &__title-wrapper {
+      padding-top: 480px;
+      margin: 0 auto;
+      width: 573px;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -2.143px;
+      margin-bottom: 40px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about-facilities {
+    padding-bottom: 245px;
+    padding-top: 0;
+    background-image: url("../images/aboutmobility.png"), url("../images/abouturban.png");
+    background-position: calc(50% + 500px) calc(50% - 230px),calc(50% - 610px) calc(50% + 300px);
+    background-repeat: no-repeat;
+    background-size: 1000px,1000px;
+
+    &__title-wrapper {
+      width: 445px;
+      padding-top: 300px;
+      margin: 0 0;
+    }
+    &__title {
+      text-align: start;
+      margin-bottom: 24px;
+    }
+    &__desc {
+      text-align: start;
+    }
+  }
+  .about-wrapper {
+    margin-left: auto;
+  }
+
+}
